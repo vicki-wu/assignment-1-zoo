@@ -1,49 +1,50 @@
 body {
   font-family: "Georgia", sans-serif; 
-  background-color: #ccffdd; 
+  background-color: #ffffff; 
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 800px;
+  width: calc(100% - 40px); 
+  max-width: 800px; 
   margin: 0 auto;
   padding: 20px;
 }
 
 .navbar {
   background-color: #ccffcc; 
-  padding: 10px 0;
-}
-
-.navbar .container {
+  padding: 10px 20px;
   display: flex;
+  justify-content: space-between; 
   align-items: center;
+  line-height: 1; 
 }
 
-.logo {
-  color: #006400; 
-  font-size: 24px;
-}
 
 .nav-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 .nav-links ul li {
-  display: inline;
-  margin-right: 20px;
+  margin-left: 20px; 
 }
 
-.nav-links ul li:last-child {
-  margin-right: 0;
+.nav-links ul li:first-child {
+  margin-left: auto; 
+}
+
+#left {
+  margin-right: auto; 
 }
 
 .nav-links ul li a {
   color: #006400;
   text-decoration: none;
+  font-size: 18px; 
   transition: color 0.3s ease;
 }
 
@@ -55,22 +56,68 @@ body {
   text-align: center;
 }
 
-.content img {
-  display: block;
-  margin: 0 auto; /* Center the image horizontally */
+.content h1 {
+  font-size: 36px; 
+}
+
+.content p {
+  font-size: 20px; 
 }
 
 .image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px; 
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.image-container a {
-  text-decoration: none;
+.overlay span {
+  color: #ffffff;
+  font-size: 18px;
 }
 
-.image-container img {
-  max-width: 200px;
-  height: auto;
-  margin: 10px;
+.image-wrapper:hover .overlay {
+  opacity: 1;
 }
+
+.image-wrapper-rounded {
+  text-align: center;
+  border-radius: 10px; 
+  overflow: hidden; 
+  margin: 20px auto;
+  max-width: 80%; 
+}
+
+.image-wrapper-rounded img {
+  width: 100%; 
+  height: auto; 
+}
+
+
