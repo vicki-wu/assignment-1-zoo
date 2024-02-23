@@ -46,4 +46,14 @@ h2 {
   margin-top: 10px; 
 }
 
+.intro {
+  max-width: 800px; 
+  margin: 0 auto;   
+  text-align: justify;
+}
+
+h3 {
+  text-align: center; 
+}
+
 
